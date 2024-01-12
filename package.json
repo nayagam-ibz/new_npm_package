@@ -1,38 +1,76 @@
 {
-  "name": "my-react-component",
-  "version": "0.1.0",
-  "private": true,
+  "name": "new_npm_package_nayagam",
+  "version": "8.2.0",
+  "description": "A ReactJS component that creates a pagination.",
+  "main": "dist/bundle.js",
+  "keywords": [
+    "react-component",
+    "paginate",
+    "paginator",
+    "pagination"
+  ],
+  "author": {
+    "name": "Adèle Delamarche"
+  },
+  "license": "MIT",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "bootstrap": "^5.3.2",
+    "prop-types": "^15"
+  },
+  "peerDependencies": {
+    "react": "^16 || ^17 || ^18"
+  },
+  "devDependencies": {
+    "@babel/core": "^7",
+    "@babel/eslint-parser": "^7",
+    "@babel/preset-env": "^7",
+    "@babel/preset-react": "^7",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.8",
+    "@testing-library/react": "^13",
+    "axios": "^1.6.5",
+    "babel-loader": "^9",
+    "core-js": "^3",
+    "eslint": "^7",
+    "eslint-plugin-react": "^7",
+    "express": "^4",
+    "husky": "^8.0.3",
+    "jest-cli": "^29",
+    "jest-environment-jsdom": "^29.2.2",
+    "jquery": "^3.6",
+    "prettier": "^2.7",
+    "react": "^18",
+    "react-bootstrap": "^2.9.2",
+    "react-dom": "^18",
+    "react-refresh": "^0.14.0",
+    "serve-static": "^1",
+    "styled-components": "^5",
+    "webpack": "^5",
+    "webpack-cli": "^4",
+    "webpack-dev-middleware": "^5",
+    "webpack-hot-middleware": "^2.25.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "build": "webpack --config webpack.config.js --mode=development",
+    "demo": "node demo/data.js && node demo/server.js",
+    "start": "npm run demo",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare:hooks": "husky install"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+hhttps://github.com/nayagam-ibz/new_npm_package.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "bugs": {
+    "url": "https://github.com/nayagam-ibz/new_npm_package/issues"
+  },
+  "homepage": "https://github.com/nayagam-ibz/new_npm_package#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
